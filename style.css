@@ -85,3 +85,12 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
+
+.skills li {
+  display: inline-block;
+  list-style: none;
+  background: oklch(95% 5% 200);
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  margin: 0.25em;
+}
