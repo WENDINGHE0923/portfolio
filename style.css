@@ -94,3 +94,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1em;
   margin: 0.25em;
 }
+
+:root {
+  color-scheme: light dark;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+}
