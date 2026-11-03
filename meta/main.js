@@ -19,7 +19,7 @@ function processCommits(data) {
 
       let ret = {
         id: commit,
-        url: 'https://github.com/YOUR_REPO/commit/' + commit,
+        url: 'https://github.com/WENDINGHE0923/portfolio/commit/' + commit,
         author,
         date,
         time,
@@ -56,7 +56,24 @@ function renderCommitInfo(data, commits) {
 
   dl.append('dt').text('Average line length');
   dl.append('dd').text(d3.mean(data, (d) => d.length).toFixed(1));
+
+  
+
+  dl.append('dt').text('Maximum line length');
+  dl.append('dd').text(d3.max(data, (d) => d.length));
+
+  dl.append('dt').text('Average depth');
+  dl.append('dd').text(d3.mean(data, (d) => d.depth).toFixed(1));
+
+  dl.append('dt').text('Maximum depth');
+  dl.append('dd').text(d3.max(data, (d) => d.depth));
+
+  const fileLengths = d3.rollups(data, (v) => v.length, (d) => d.file);
+  const longestFile = fileLengths.sort((a, b) => b[1] - a[1])[0];
+  dl.append('dt').text('Longest file');
+  dl.append('dd').text(`${longestFile[0]} (${longestFile[1]} lines)`);
 }
+
 let xScale;
 let yScale;
 let commits;
