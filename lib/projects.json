@@ -1,4 +1,11 @@
-[
+[   {
+    "title": "Bikewatching",
+    "year": "2026",
+    "image": "images/bikewatching.png",
+    "description": "Interactive Mapbox map of BlueBike traffic in the Boston area, March 2024. Green bike lanes, station circles sized by traffic volume, a time slider to filter by time of day, and colors showing whether traffic is mostly arrivals or departures.",
+    "url": "https://wendinghe0923.github.io/bikewatching/"
+    },
+
     {
         "title": "Lorem ipsum dolor sit.",
         "year": "2024",
