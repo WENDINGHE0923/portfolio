@@ -303,7 +303,10 @@ function updateFileDisplay(filteredCommits) {
       }),
     );
 
-  filesContainer.select('dt > code').text((d) => d.name);
+  filesContainer
+    .select('dt')
+    .html((d) => `<code>${d.name}</code><small style="display:block; opacity:0.6; font-size:0.8em;">${d.lines.length} lines</small>`);
+
   filesContainer.select('dd')
     .selectAll('div')
     .data((d) => d.lines)
