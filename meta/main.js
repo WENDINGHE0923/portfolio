@@ -353,7 +353,7 @@ commitMaxTime = timeScale.invert(commitProgress);
     .join('div')
     .attr('class', 'step')
     .html(
-      (d) => `On ${d.date}, <a href="${d.url}" target="_blank">${d.id}</a> made <strong>${d.totalLines} lines</strong> of code changes`,
+      (d) => `On ${d.datetime}, <a href="${d.url}" target="_blank">${d.id}</a> made <strong>${d.totalLines} lines</strong> of code changes`,
     );
 
   const scroller = scrollama();
@@ -373,7 +373,7 @@ commitMaxTime = timeScale.invert(commitProgress);
   .join('div')
   .attr('class', 'step')
   .html(
-    (d) => `On ${d.date}, <a href="${d.url}" target="_blank">${d.id}</a> made <strong>${d.totalLines} lines</strong> of code changes`,
+    (d) => `On ${d.datetime}, <a href="${d.url}" target="_blank">${d.id}</a> made <strong>${d.totalLines} lines</strong> of code changes`,
   );
 
 const scroller2 = scrollama();
