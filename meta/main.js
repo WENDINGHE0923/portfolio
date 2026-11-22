@@ -38,7 +38,8 @@ function processCommits(data) {
       });
 
       return ret;
-    });
+    })
+    .sort((a, b) => a.datetime - b.datetime);
 }
 function renderCommitInfo(data, commits) {
   const dl = d3.select('#stats').append('dl').attr('class', 'stats');
